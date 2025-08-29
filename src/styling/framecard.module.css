@@ -1,0 +1,40 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    border: 1px solid grey;
+    transition: transform 0.3s;
+    margin: 15px;
+    padding: 6px;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+.card hr {
+    width: 50%;
+}
+
+.card:hover {
+    transform: scale(1.1)
+}
+
+.image {
+    width: 100%;
+}
+
+.caption {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 18vw;
+    }
+
+    .caption {
+        font-size: 21px;
+    }
+}

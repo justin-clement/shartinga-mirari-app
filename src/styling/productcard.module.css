@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.displayCard {
+    border: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: 5px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+}
+
+.displayCard p {
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .displayCard {
+        width: 16%;
+    }
+}

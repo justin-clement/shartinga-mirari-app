@@ -1,0 +1,55 @@
+.sizesMenu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 20px;
+    gap: 20px;
+}
+
+.sizes {
+    padding: 10px;
+    border: 2px solid grey;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.chosen {
+    padding: 10px;
+    border: 2px solid grey;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2);
+    border: 2px solid darkgreen;
+    color: darkgreen;
+    font-weight: bold;     
+       
+}
+
+.sizes:hover {
+    transform: scale(1.2);
+    border: 2px solid darkgreen;
+    color: darkgreen;
+    font-weight: bold;   
+}
+
+
+@media (min-width: 768px) {
+    .sizes {
+        width: 2vw;
+        height: 2vw;
+    }
+}

@@ -1,0 +1,55 @@
+.imageOne, .imageThree {
+    width: 100vw;
+}
+
+.containerOne, .containerTwo, .containerThree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 21px;
+}
+
+.bioStatement {
+    text-align: center;
+    padding: 15px;
+}
+
+.homeButton {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 70vw;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.homeButton:hover {
+    background-color: rgb(29, 29, 29);
+}
+
+@media (min-width: 768px) {
+    .containerOne {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 15px;
+        font-size: 24px;
+    }
+
+    .containerTwo {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        gap: 15px;
+        font-size: 24px;
+    }
+
+    .imageOne {
+        width: 27vw;
+        border-radius: 5px;
+    }
+
+    .imageThree {
+        width: 50vw;
+        border-radius: 5px;
+    }
+}

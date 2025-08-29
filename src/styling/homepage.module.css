@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+.homepageContainer {
+    font-family: 'EB Garamond', serif;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+/* Hero Video */
+.heroSection {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+}
+
+.landingVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.introMessage {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.introMessage h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Collection Section */
+.collectionPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.pictureOneHome {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.collectionPreview h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.exploreButton {
+    background: black;
+    color: white;
+    padding: 1.1rem 3.5rem;
+    font-size: 1.15rem;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-top: 1rem;
+    min-width: 220px;
+}
+
+.exploreButton:hover {
+    background: #222;
+}
+
+.briefAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, bisque 0%, #fff7e6 100%);
+    border-radius: 10px;
+    padding: 25px;
+    gap: 10px;
+}
+
+.briefAbout img {
+    border-radius: 6px;
+    width: 80%;
+}
+
+.briefText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.briefText h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.briefText p {
+    font-size: 20px;
+}
+
+.frameDisplay {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.footer li {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.footer li:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+    .collectionPreview {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: 3rem;
+        text-align: left;
+        padding: 6rem 4rem;
+    }
+    .pictureOneHome {
+        margin-bottom: 0;
+        max-width: 350px;
+        height: auto;
+        justify-self: end;
+    }
+    .collectionPreviewContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .collectionPreview h2 {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .exploreButton {
+        padding: 1.2rem 5rem;
+        font-size: 1.2rem;
+        min-width: 300px;
+        align-self: center;
+    }
+
+    .briefAbout {
+        flex-direction: row;
+    }
+
+    .briefAbout img {
+        width: 30vw;
+    }
+
+    .briefText h2 {
+        font-size: 50px;
+    }
+
+    .briefText p {
+        font-size: 25px;
+    }
+
+    .frameDisplay {
+        padding: 24px;
+    }
+}

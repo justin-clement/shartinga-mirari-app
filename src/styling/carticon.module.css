@@ -1,0 +1,23 @@
+.cart {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cartNumber {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px;
+    width: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.cartText {
+    padding: 5px;
+}

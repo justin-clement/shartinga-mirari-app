@@ -1,0 +1,6 @@
+.shartinga-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
