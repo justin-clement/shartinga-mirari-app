@@ -73,8 +73,11 @@ function ExplorePage() {
                     <h3 style={{textAlign: 'center'}}>Events</h3>
                     <p className={styles.subtext}>Join us at exclusive shows and pop-ups.</p>
                     <div className="eventsDisplay">
-                        <h3>Check Us Out At Fame 2025!</h3>
-                        <p>This is where we insert media from the FAME Event.</p>
+                        <h3>Check Us Out!</h3>
+                        <p 
+                        style={{
+                            color: "grey"
+                        }}>This is where you will find news and media from events we're part of.</p>
                     </div>
                 </div>
                 <p style={{textAlign: "center"}}><Link to="/" className={styles.link}>Back to Home</Link></p>

@@ -13,8 +13,6 @@ import guyWalking from "../assets/pictures/guy_in_brown_walking.jpg"
 import girlBrown from "../assets/pictures/girl_in_brown.jpg"
 
 
-
-
 function Homepage() {
 
     const navigate = useNavigate();
@@ -72,10 +70,10 @@ function Homepage() {
                 {/* Brief About Section */}
                 <div className={styles.briefAbout}>
                     <div className={styles.briefText}>
-                        <h2>African Roots, European Branches.</h2>
-                        <p>Birthed in the conscious, daring city of Port Harcourt, Nigeria, 
-                            and influenced by the sure, subtle urbanness of Brighton, England, 
-                            SHARTINGA MIRARI has always been about speaking confident culture.
+                        <h2>Across Worlds, One Vision.</h2>
+                        <p>Continually aware of heritage, and with expanded imagination, we move 
+                            in rhythm with the future - crafting fashion that's alive, 
+                            bold, and visionary.
                         </p>
                     </div>
                     <motion.img src={GroupPhoto}

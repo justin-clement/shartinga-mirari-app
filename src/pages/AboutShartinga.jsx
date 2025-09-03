@@ -3,7 +3,7 @@ import styles from '../styling/aboutshartinga.module.css'
 import photo1 from '../assets/pictures/guy_in_hat2.jpg'
 import threeGees from '../assets/pictures/three_guys_lobby.jpg'
 import chessGirls from '../assets/pictures/two_girls_chess.jpg'
-import { motion, scale } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useNavigate } from "react-router-dom"
 import ScrollToTop from "../components/ScrollToTop"
 
@@ -19,7 +19,7 @@ function AboutShartinga() {
     return (
         <>
             <ScrollToTop />
-                <div>
+            <div>
                 <ShartingaHeader />
 
                 <div className={styles.containerOne}>
@@ -38,12 +38,20 @@ function AboutShartinga() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }} 
                         transition={{ duration: 1.3 }}>Born in the Garden City.</motion.h2>
-                        <p>The word, <i>Shartinga</i>, coined by a friend, began as casual slang 
-                            in Port Harcourt, Nigeria. Originally referencing a "nice shirt", our meaning 
-                            has deepened over time to redefine fashion and 
-                            culture. We wanted to speak to identity and style, and also, confidence. 
-                            Eventually, <i>Mirari</i> was added to our name, a Latin word with the meaning, "to 
-                            wonder at". Together, Shartinga Mirari stands redefined: Fashion Wonder. 
+                        <p><i>Shartinga</i>, coined from street slang in Port Harcourt, was once an 
+                        exaggerated way of saying "nice shirt". But over time, it came to stand for more. 
+                        Fashion. Identity. Confidence. Culture.
+                        </p>                    
+                        <p>
+                            The word <i>Mirari</i> - Latin for "to wonder at" - redefined our vision. 
+                            Together, <i>Shartinga Mirari</i> also means wondering at nice clothes. 
+                            Inspiring wonder by fashion. 
+                            We believe in celebrating culture, inspiring real confidence, and creating pieces 
+                            that make you feel alive.
+                        </p>
+                        <p>We view clothing as expression, fabric as discovery, and style as power. 
+                            Rooted in Africa, reaching for the stars, <i>Shartinga Mirari</i> is Afrofuturism 
+                            in motion: where identity and fashion meet to shape tomorrow.
                         </p>
                     </motion.div>
                 </div>
@@ -66,12 +74,16 @@ function AboutShartinga() {
                             initial={{ opacity: 0, y: 20 }} 
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} 
-                            transition={{ duration: 1.3 }}>With a Touch of Europe.</motion.h2>
-                            <p>Motion is described as changing position over time, and we did change position. 
-                                Change continents. We are the sum total of our experiences and our 
-                                time in the seaside city of Brighton, England has left its imprint on our tastes and style. 
+                            transition={{ duration: 1.3 }}>A Journey Through Motion.</motion.h2>
+                            <p>Our path has carried us across continents, weaving new textures into our story. 
+                                From the Garden City to the buzzing rhythms of London, each place leaves its mark - 
+                                shaping taste, refining style, expanding vision.
                             </p>
-                            <p>Home or abroad, we persist with our quality. 
+                            <p>We are the sum of these journeys. Rooted in Africa, inspired by the world, 
+                                we persist with our craft: quality that transcends borders and time.
+                            </p>
+                            <p>Shartinga Mirari isn't just movement through space - it's motion toward 
+                                the future.
                             </p>
                         </motion.div>
                     </div>
@@ -93,11 +105,12 @@ function AboutShartinga() {
                         initial={{ opacity: 0, y: 20 }} 
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }} 
-                        transition={{ duration: 1.3 }}>Who We Are.</motion.h2>
-                        <p>The scratch in our emblem is no flaw, but a symbol of 
-                            resilience, an outward sign of inward strength. It's a 
-                            reminder of our experiences, and that despite the trials 
-                            or challenges that have come our way, here we stand. Alive. Strong. 
+                        transition={{ duration: 1.3 }}>Core.</motion.h2>
+                        <p>The scar in our emblem is no flaw, but a symbol of resilience. 
+                            An outward sign of inner strength. It carries the memory of our journey, 
+                            the trials we've faced, the challenges we've overcome. 
+                            It is a reminder that through it all, we endure. We rise.
+                            Standing alive, awoken, strong.
                         </p>
                     </motion.div>
                 </div>
