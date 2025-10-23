@@ -5,12 +5,20 @@ import FrameCard from "../components/FrameCard";
 import { useNavigate, Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 
-import GroupPhoto from "../assets/pictures/group_stairs_photo.jpg"
-import guyAndGirl from "../assets/pictures/guy_and_girl_outside.jpg"
-import tripleThreat from "../assets/pictures/three_guys_lobby.jpg"
-import twoGirlsBlur from "../assets/pictures/two_girls_blurfocus.jpg"
+import GroupPhoto from "../assets/pictures/blue_girls_black_guy.jpg"
+import tileGirl from "../assets/pictures/girl_against_tiles.jpg"
 import guyWalking from "../assets/pictures/guy_in_brown_walking.jpg"
-import girlBrown from "../assets/pictures/girl_in_brown.jpg"
+
+
+import darkShartinga from "../assets/pictures/shartinga_dark.jpg"
+import comp1 from "../assets/pictures/comp_1.jpg"
+import comp2 from "../assets/pictures/comp_2.jpg"
+import comp3 from "../assets/pictures/comp_3.jpg"
+import comp4 from "../assets/pictures/comp_4.jpg"
+import comp5 from "../assets/pictures/girl_in_cream.jpg"
+import comp6 from "../assets/pictures/guy_in_darkgrey_hoodie.jpg"
+import comp7 from "../assets/pictures/girl_in_glasses_closeup.jpg"
+import comp8 from "../assets/pictures/cool_guy_art_deco.jpg"
 
 
 function Homepage() {
@@ -55,7 +63,7 @@ function Homepage() {
                     viewport={{ once: true }}
                     transition={{ duration: 2, ease: "easeOut" }}
                 >
-                    <img src={guyAndGirl} className={styles.pictureOneHome} alt="Collection Preview" />
+                    <img src={tileGirl} className={styles.pictureOneHome} alt="Collection Preview" />
                     <div className={styles.collectionPreviewContent}>
                         <h2>View Our Latest Collection</h2>
                         <button
@@ -88,13 +96,33 @@ function Homepage() {
                     <h2 style={{
                         "fontSize": "35px", 
                         "textAlign": "center" 
-                        }}>Our Other Collections</h2>
+                        }}>Complementary Catalogues</h2>
+
                     <div className={styles.frameDisplay}>
-                        <FrameCard src={tripleThreat} caption="WIDA YA EYES" />
-                        <FrameCard src={twoGirlsBlur} caption="FOCUS" />
-                        <FrameCard src={girlBrown} caption="URBAN MELODRAMA" />
-                        <FrameCard src={guyWalking} caption="WHO GOES?" />
+                        <FrameCard src={darkShartinga} />
+                        <FrameCard src={comp1} />
+                        <FrameCard src={comp2} />
+                        <FrameCard src={comp3} />
+                        <FrameCard src={comp4} />
+                        <FrameCard src={comp5} />
+                        <FrameCard src={comp6} />
+                        <FrameCard src={guyWalking} />
+                        <FrameCard src={comp7} />
+                        <FrameCard src={comp8} />
                     </div>
+                </div>
+
+                <div className={styles.eventSection}>
+                    <h3 style={{
+                        textAlign: 'center', 
+                        fontSize: '35px'}}>Events</h3>
+                    <Link className={styles.link}
+                     to='/events' 
+                     style={{
+                        color: "white", 
+                        textAlign: "center"
+                     }}>View our runway collection from FAME 2025.</Link>
+                    
                 </div>
 
 

@@ -126,6 +126,17 @@
     color: black;
 }
 
+.eventSection {
+    background-image: url('../assets/pictures/fame2.jpg');
+    background-size: cover;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
 /* Footer */
 .footer {
     padding: 2rem;
@@ -206,5 +217,9 @@
 
     .frameDisplay {
         padding: 24px;
+    }
+
+    .eventSection {
+        height: 200px;
     }
 }

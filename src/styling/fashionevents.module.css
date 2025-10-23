@@ -1,0 +1,41 @@
+.pageContainer {
+    padding: 2%;
+    color: purple;
+}
+
+.displayArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.fameImage {
+    width: 400px;
+    margin: 3px;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+
+.fameImage:hover {
+    transform: scale(0.9);
+}
+
+.homeButton {
+    padding: 10px;
+    width: 35%;
+    background: none;
+    font-size: 20px;
+    color: purple;
+    font-family: "Cormorant Garamond";
+    cursor: pointer;
+    border: 1px solid purple;
+}
+
+@media (min-width: 768px) {
+    .displayArea {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
