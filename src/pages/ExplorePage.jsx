@@ -11,7 +11,9 @@ import ScrollToTop from "../components/ScrollToTop";
 import sittingGirl from "../assets/pictures/sitting_girl_aesthetic.jpg"
 import hatGuy from "../assets/pictures/guy_in_hat.jpg"
 
+
 function ExplorePage() {
+    
     const navigate = useNavigate();
 
     return (
@@ -26,8 +28,8 @@ function ExplorePage() {
                     initial={{opacity: 0}} 
                     animate={{opacity: 1}} 
                     transition={{duration: 2.5}}
-                    style={{textAlign: 'center'}}>Our Latest</motion.h2>
-                    <p className={styles.subtext}>Discover the newest arrivals and trending looks.</p>
+                    style={{textAlign: 'center'}}>Discover</motion.h2>
+                    <p className={styles.subtext}>Our newest arrivals.</p>
                     <div className={styles.latestDisplay}>
                         <ProductCard src={snookerModel} productName="Summer Brown Two Piece" />
                         <ProductCard src={creamGirl} productName="Summer Cream Two Piece" />
@@ -50,7 +52,7 @@ function ExplorePage() {
                         <ProductCard src={snookerModel} productName="Summer Brown Two Piece" />
                     </div>
                     <br />
-                    <Link className={styles.link} style={{textAlign: "center"}}>View More From Us</Link>
+                    <Link className={styles.link} style={{textAlign: "center"}}>View More</Link>
                 </div>
                 <hr width={150} />
 
@@ -69,7 +71,17 @@ function ExplorePage() {
                 </div>
                 <hr width={150} />
 
-                
+                <div className={styles.styleSection}>
+                    <h3 style={{textAlign: 'center'}}>Events</h3>
+                    <p className={styles.subtext}>Join us at exclusive shows and pop-ups.</p>
+                    <div className="eventsDisplay">
+                        <h3>Check Us Out!</h3>
+                        <p 
+                        style={{
+                            color: "grey"
+                        }}>This is where you will find news and media from events we're part of.</p>
+                    </div>
+                </div>
                 <p style={{textAlign: "center"}}><Link to="/" className={styles.link}>Back to Home</Link></p>
                 <footer className={styles.footer}>
                     <ul>

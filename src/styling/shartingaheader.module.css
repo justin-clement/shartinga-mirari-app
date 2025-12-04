@@ -1,0 +1,9 @@
+.shartingaHeader {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    position: -webkit-sticky;
+    top: 0;
+}

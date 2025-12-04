@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import ShartingaLogo from '../assets/ShartingaLogo.PNG'
-import '../styling/shartingaheader.css'
+import styles from '../styling/shartingaheader.module.css'
 
 function ShartingaHeader() {
 
@@ -11,7 +11,7 @@ function ShartingaHeader() {
     };
 
     return (
-        <div className="shartinga-header">
+        <div className={styles.shartingaHeader}>
             <img 
             src={ShartingaLogo} 
             alt="Shartinga Logo" 

@@ -24,8 +24,13 @@ import comp8 from "../assets/pictures/cool_guy_art_deco.jpg"
 function Homepage() {
 
     const navigate = useNavigate();
+
     const goToExplore = () => {
         navigate('/explore')
+    };
+
+    const goToEvents = () => {
+        navigate('/events')
     };
 
     return (
@@ -33,7 +38,6 @@ function Homepage() {
             <ScrollToTop />
             <div className={styles.homepageContainer}>
                 <ShartingaHeader />
-                <hr />
 
                 {/* Hero Video Section */}
                 <section className={styles.heroSection}>
@@ -63,9 +67,9 @@ function Homepage() {
                     viewport={{ once: true }}
                     transition={{ duration: 2, ease: "easeOut" }}
                 >
-                    <img src={tileGirl} className={styles.pictureOneHome} alt="Collection Preview" />
+                    <img src="/images/SIDE1B.jpg" className={styles.pictureOneHome} alt="Collection Preview" />
                     <div className={styles.collectionPreviewContent}>
-                        <h2>View Our Latest Collection</h2>
+                        <h2>View Our Collection</h2>
                         <button
                             className={styles.exploreButton}
                             onClick={goToExplore}
@@ -85,14 +89,14 @@ function Homepage() {
                         </p>
                     </div>
                     <motion.img src={GroupPhoto}
-                    alt="Five models on a staircase" 
+                    alt="Bold in blues and blacks." 
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1}} />
                 </div>
                 <br />
 
-                <div >
+                <div className={styles.complementarySection}>
                     <h2 style={{
                         "fontSize": "35px", 
                         "textAlign": "center" 
@@ -100,19 +104,19 @@ function Homepage() {
 
                     <div className={styles.frameDisplay}>
                         <FrameCard src={darkShartinga} />
-                        <FrameCard src={comp1} />
-                        <FrameCard src={comp2} />
+                        {/* <FrameCard src={comp1} /> */}
+                        {/* <FrameCard src={comp2} /> */}
                         <FrameCard src={comp3} />
                         <FrameCard src={comp4} />
                         <FrameCard src={comp5} />
                         <FrameCard src={comp6} />
                         <FrameCard src={guyWalking} />
                         <FrameCard src={comp7} />
-                        <FrameCard src={comp8} />
+                        {/* <FrameCard src={comp8} /> */}
                     </div>
                 </div>
 
-                <div className={styles.eventSection}>
+                <div onClick={goToEvents} className={styles.eventSection}>
                     <h3 style={{
                         textAlign: 'center', 
                         fontSize: '35px'}}>Events</h3>

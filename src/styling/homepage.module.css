@@ -3,7 +3,8 @@
 .homepageContainer {
     font-family: 'EB Garamond', serif;
     overflow-x: hidden;
-    background-color: #fff;
+    background-color: black;
+    color: whitesmoke;
 }
 
 /* Hero Video */
@@ -51,7 +52,6 @@
 }
 
 .pictureOneHome {
-    max-width: 300px;
     width: 100%;
     margin-bottom: 2rem;
     border-radius: 8px;
@@ -66,8 +66,8 @@
 }
 
 .exploreButton {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     padding: 1.1rem 3.5rem;
     font-size: 1.15rem;
     border: none;
@@ -80,7 +80,7 @@
 }
 
 .exploreButton:hover {
-    background: #222;
+    background: #bdbdbd;
 }
 
 .briefAbout {
@@ -91,6 +91,7 @@
     border-radius: 10px;
     padding: 25px;
     gap: 10px;
+    color: black;
 }
 
 .briefAbout img {
@@ -113,12 +114,24 @@
     font-size: 20px;
 }
 
+
 .frameDisplay {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    border-radius: 15px;
-    flex-wrap: wrap;
-    padding: 15px;
+    gap: 10px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0; /* let cards align edge-to-edge */
+    box-sizing: border-box;
+    height: 100vh; /* make frames full viewport height for immersive feel */
+    align-items: center;
+    padding-left: 0;
+}
+
+.complementarySection {
+
 }
 
 .link {
@@ -176,7 +189,7 @@
     }
     .pictureOneHome {
         margin-bottom: 0;
-        max-width: 350px;
+        width: 480px;
         height: auto;
         justify-self: end;
     }
@@ -213,6 +226,7 @@
 
     .briefText p {
         font-size: 25px;
+        color: black;
     }
 
     .frameDisplay {
