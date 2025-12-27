@@ -116,18 +116,11 @@
 
 
 .frameDisplay {
-    width: 100%;
     display: flex;
-    gap: 10px;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0; /* let cards align edge-to-edge */
-    box-sizing: border-box;
-    height: 100vh; /* make frames full viewport height for immersive feel */
-    align-items: center;
-    padding-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
 }
 
 .complementarySection {

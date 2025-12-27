@@ -67,7 +67,7 @@ function Homepage() {
                     viewport={{ once: true }}
                     transition={{ duration: 2, ease: "easeOut" }}
                 >
-                    <img src="/images/SIDE1B.jpg" className={styles.pictureOneHome} alt="Collection Preview" />
+                    <img src="/images/IMG_9578.JPG" className={styles.pictureOneHome} alt="Collection Preview" />
                     <div className={styles.collectionPreviewContent}>
                         <h2>View Our Collection</h2>
                         <button
@@ -88,7 +88,7 @@ function Homepage() {
                             bold, and visionary.
                         </p>
                     </div>
-                    <motion.img src={GroupPhoto}
+                    <motion.img src="/images/IMG_9624.JPG"
                     alt="Bold in blues and blacks." 
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
@@ -103,18 +103,26 @@ function Homepage() {
                         }}>Complementary Catalogues</h2>
 
                     <div className={styles.frameDisplay}>
-                        <FrameCard src={darkShartinga} />
+                        <motion.img 
+                        src="/images/IMG_9621.JPG"
+                        width={400}
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{duration: 1}} />
+
+                        {/* <FrameCard src={darkShartinga} /> */}
                         {/* <FrameCard src={comp1} /> */}
                         {/* <FrameCard src={comp2} /> */}
-                        <FrameCard src={comp3} />
+                        {/* <FrameCard src={comp3} />
                         <FrameCard src={comp4} />
                         <FrameCard src={comp5} />
                         <FrameCard src={comp6} />
                         <FrameCard src={guyWalking} />
-                        <FrameCard src={comp7} />
+                        <FrameCard src={comp7} /> */}
                         {/* <FrameCard src={comp8} /> */}
                     </div>
                 </div>
+                <br />
 
                 <div onClick={goToEvents} className={styles.eventSection}>
                     <h3 style={{
