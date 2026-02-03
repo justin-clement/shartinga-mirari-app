@@ -16,7 +16,7 @@ function ShartingaHeader() {
             src={ShartingaLogo} 
             alt="Shartinga Logo" 
             className="shartinga-logo" 
-            width={250} 
+            width={300} 
             onClick={home} />
         </div>
     )

@@ -18,10 +18,7 @@ function AboutShartinga() {
 
     return (
         <>
-            <ScrollToTop />
             <div>
-                <ShartingaHeader />
-
                 <div className={styles.containerOne}>
                     <motion.img className={styles.imageOne} 
                     src={threeGees}

@@ -1,9 +1,22 @@
-body {
+@font-face {
     font-family: "Cormorant Garamond", serif;
+    src: url('./assets/fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-#root {
+@font-face {
+    font-family: "Cormorant Garamond", serif;
+    src: url('./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+body, #root {
+    font-family: "Cormorant Garamond", serif;
     width: 100%;
     padding: 0;
     margin: 0;
+    background-color: black;
 }

@@ -1,0 +1,16 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-size: 30px;
+    color: grey;
+}
+
+.contactPanel {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+}
