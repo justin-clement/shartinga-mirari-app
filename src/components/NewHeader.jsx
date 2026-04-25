@@ -23,7 +23,6 @@ function MainHeader() {
                 <div className={styles.navigationMenu}>
                     <p onClick={goToCollections}>COLLECTIONS</p>
                     <p>MANIFESTO</p>
-                    <p>JOURNAL</p>
                     <p>ABOUT</p>
                 </div>
 

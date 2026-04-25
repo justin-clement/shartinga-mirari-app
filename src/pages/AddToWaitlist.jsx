@@ -44,8 +44,8 @@ function AddToWaitlist({ productName }) {
                 loading="lazy"
                 src="/images/IMG_9578.JPG" />
                 <h2>{productName}</h2>
-                {demo && 
-                <h2><b>Alligator Varsity Jacket by Shartinga Mirari</b></h2>}
+                 
+                <h2><b>Alligator Varsity Jacket by Shartinga Mirari</b></h2>
 
                 <div className={styles.form}>
                     <p>When more jacketa are released, your order will be reserved.</p>
