@@ -1,0 +1,29 @@
+.logoArea {
+    text-align: center;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 0.4fr 2fr 0.5fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 1px 10px rgba(240, 240, 240, 0.8);
+}
+
+.navigationMenu {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigationMenu p {
+    margin: 0;
+    display: inline;
+    font-size: 0.6rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+}

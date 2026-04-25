@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import styles from "../styling/addtowaitlist.module.css"
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -6,14 +6,10 @@ import SizeSelect from "../components/SizeSelect";
 
 function AddToWaitlist({ productName }) {
 
-    const [demo, setDemo] = useState(true);
-
-    const { productId } = useParams();
-
-    const [chosenSize, setChosenSize] = useState('');
+    const location = useLocation();
+    const chosenSize = location.state?.size;
 
     const [order, setOrder] = useState({
-        id: productId, 
         size: chosenSize, 
         units: 1, 
         email: ''
@@ -27,7 +23,7 @@ function AddToWaitlist({ productName }) {
         }))
     };
 
-    const addCustomertoWaitlist = () => {
+    const addCustomertoWaitlist = async () => {
         return;
     };
 
@@ -38,8 +34,8 @@ function AddToWaitlist({ productName }) {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className={styles.pageContainer}>
-                <h1>Waitlist</h1>
                 <br />
+
                 <motion.img 
                 initial={{opacity: 0}}
                 animate={{opacity: 1}} 
@@ -50,15 +46,9 @@ function AddToWaitlist({ productName }) {
                 <h2>{productName}</h2>
                 {demo && 
                 <h2><b>Alligator Varsity Jacket by Shartinga Mirari</b></h2>}
-                <p>When new stock comes out, your order will be reserved.</p>
-                
 
                 <div className={styles.form}>
-                    <SizeSelect 
-                    sizesArray={['S', 'M', 'L', 'XL']} 
-                    onSizeChange={setChosenSize}/>
-                    <br />
-
+                    <p>When more jacketa are released, your order will be reserved.</p>
                     <label>How many would you like?<br /> 
                         <input 
                         name='units'

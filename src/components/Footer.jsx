@@ -8,46 +8,32 @@ import { FaInstagram as Insta, FaTiktok as Tiktok } from "react-icons/fa";
 
 function Footer() {
 
-    const navigate = useNavigate();
-
-    const goToAbout = () => {
-        navigate('/about')
-    }
 
     return (
         <>
             <div className={styles.footerContainer}>
-                <p onClick={goToAbout}>About Shartinga</p>
-
-                <p style={{ 
-                    margin: "0"
-                }}>Stay in touch</p>
+            
                 <ul className={styles.contactPanel}>
                     <li>
                         <div>
                             <a 
-                            style={{color: "goldenrod"}}
-                            href="mailto:shartinga.mirari.fashion@gmail.com"><Email size={40} /></a>
+                            style={{color: "grey"}}
+                            href="mailto:shartinga.mirari.fashion@gmail.com"><Email size={20} /></a>
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <Whatsapp 
-                            color="green"
-                            size={40} />
-                        </div>
-                    </li>
+                    
                     <li>
                         <div>
                             <Insta 
-                            color="purple"
-                            size={40} />
+                            color="grey"
+                            size={20} />
                         </div>
                     </li>
                     <li>
                         <div>
                             <Tiktok 
-                            size={40} />
+                            color="grey"
+                            size={20} />
                         </div>
                     </li>
                 </ul>

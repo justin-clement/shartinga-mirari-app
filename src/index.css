@@ -12,11 +12,36 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Odibee Sans';
+    src: url('./assets/fonts/OdibeeSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Red Hat';
+    src: url('./assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+:root {
+    --site-font: 'Red Hat';
+    --site-bg: #060606;
+    --site-text: whitesmoke;
+}
 
 body, #root {
-    font-family: "Cormorant Garamond", serif;
+    font-family: var(--site-font), serif;
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: var(--site-bg);
+    color: var(--site-text)
+}
+
+.iconDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

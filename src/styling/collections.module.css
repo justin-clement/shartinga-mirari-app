@@ -1,0 +1,68 @@
+.pageContainer {
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mainImage {
+    padding: 7px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainImage img {
+    width: 180px;
+}
+
+.miniImages {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.miniImages img {
+    width: 50px;
+}
+
+.clothingDetails {
+    padding: 7px;
+}
+
+.clothingDetails h2 {
+    margin-bottom: 0;
+}
+
+.qualities {
+    padding-left: 0;
+}
+
+.sizeSelect {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sizeSelect li {
+    outline: 2px solid grey;
+    padding: 5px;
+    width: 20px;
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.acquireButton {
+    width: 80%;
+    background-color: whitesmoke;
+    font-family: var(--site-font);
+    font-weight: bold;
+    padding: 7px;
+    border: none;
+    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}

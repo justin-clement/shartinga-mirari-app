@@ -124,10 +124,6 @@
     padding: 16px;
 }
 
-.complementarySection {
-
-}
-
 .link {
     text-decoration: none;
     color: black;
@@ -142,6 +138,7 @@
     justify-content: center;
     color: white;
     font-weight: bold;
+    font-family: "Cormorant Garamond";
 }
 
 /* Footer */
