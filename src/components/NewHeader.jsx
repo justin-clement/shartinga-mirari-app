@@ -13,11 +13,15 @@ function MainHeader() {
         navigate("/collections")
     };
 
+    const goToHome = () => {
+        navigate("/")
+    };
+
     return (
         <>
             <div className={styles.header}>
                 <div className={styles.logoArea}>
-                    <img width={150} src={logo} alt="Shartinga Mirari Logo" />
+                    <img onClick={goToHome} width={150} src={logo} alt="Shartinga Mirari Logo" />
                 </div>
 
                 <div className={styles.navigationMenu}>

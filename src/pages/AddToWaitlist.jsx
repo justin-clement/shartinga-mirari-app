@@ -37,18 +37,19 @@ function AddToWaitlist({ productName }) {
                 <br />
 
                 <motion.img 
-                initial={{opacity: 0}}
-                animate={{opacity: 1}} 
+                animate={{opacity: [0, 1], y: [-20, 0]}} 
                 transition={{duration: 0.5}} 
                 width={400} 
                 loading="lazy"
                 src="/images/IMG_9578.JPG" />
                 <h2>{productName}</h2>
                  
-                <h2><b>Alligator Varsity Jacket by Shartinga Mirari</b></h2>
+                <motion.h2 
+                animate={{ y: [20, 0] }}
+                transition={{ duration: 0.5 }}><b>Alligator Varsity Jacket from Shartinga Mirari</b></motion.h2>
 
                 <div className={styles.form}>
-                    <p>When more jacketa are released, your order will be reserved.</p>
+
                     <label>How many would you like?<br /> 
                         <input 
                         name='units'
@@ -60,13 +61,13 @@ function AddToWaitlist({ productName }) {
                     </label>
                     <br />
 
-                    <label>Email: <br />
+                    <label><i>We'll notify you about your order via email: </i><br />
                         <input 
                         name='email'
                         value={order.email}
                         className={styles.formField}
                         type="email" 
-                        placeholder="Email address" 
+                        placeholder="person@example.com" 
                         required 
                         onChange={handleChange} />
                     </label>
@@ -74,7 +75,7 @@ function AddToWaitlist({ productName }) {
 
                     <button 
                     className={styles.button}
-                    onClick={addCustomertoWaitlist}>Join Waitlist</button>
+                    onClick={addCustomertoWaitlist}>Place Order</button>
                     <br />
                     <br />
                 </div>

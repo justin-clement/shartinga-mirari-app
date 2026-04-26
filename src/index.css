@@ -33,7 +33,7 @@
 
 body, #root {
     font-family: var(--site-font), serif;
-    width: 95%;
+    width: 100%;
     padding: 0;
     margin: 0;
     background-color: var(--site-bg);
