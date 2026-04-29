@@ -21,9 +21,16 @@
     margin: 0;
     display: inline;
     font-size: 0.6rem;
+    cursor: pointer;
 }
 
 .icons {
     display: flex;
     justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+    .navigationMenu p {
+        font-size: 1rem;
+    }
 }

@@ -17,6 +17,10 @@ function MainHeader() {
         navigate("/")
     };
 
+    const goToAbout = () => {
+        navigate("/about")
+    };
+
     return (
         <>
             <div className={styles.header}>
@@ -27,7 +31,7 @@ function MainHeader() {
                 <div className={styles.navigationMenu}>
                     <p onClick={goToCollections}>COLLECTIONS</p>
                     <p>MANIFESTO</p>
-                    <p>ABOUT</p>
+                    <p onClick={goToAbout}>ABOUT</p>
                 </div>
 
                 <div className={styles.icons}>

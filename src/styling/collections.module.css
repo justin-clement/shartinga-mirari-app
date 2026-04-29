@@ -2,6 +2,7 @@
     font-size: 0.8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .mainImage {
@@ -59,6 +60,7 @@
 .acquireButton {
     width: 80%;
     background-color: whitesmoke;
+    color: #060606;
     font-family: var(--site-font);
     font-weight: bold;
     padding: 7px;

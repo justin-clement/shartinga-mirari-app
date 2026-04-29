@@ -1,6 +1,5 @@
 import styles from "../styling/fashionevents.module.css"
 import fameIntroVid from "../assets/videos/fame_vid1.mp4"
-import ShartingaHeader from "../components/ShartingaHeader"
 
 import fame1 from "../assets/pictures/fame1.jpg"
 import fame2 from "../assets/pictures/fame2.jpg"
@@ -13,7 +12,6 @@ import fame8 from "../assets/pictures/fame8.jpg"
 import fame9 from "../assets/pictures/fame9.jpg"
 import fame10 from "../assets/pictures/fame10.jpg"
 import { useNavigate } from "react-router-dom"
-import ScrollToTop from "../components/ScrollToTop"
 
 
 function FashionEvents() {
@@ -22,13 +20,10 @@ function FashionEvents() {
 
     const backHome = () => {
         navigate('/')
-    }
+    };
 
     return (
         <>
-            <ScrollToTop />
-            <ShartingaHeader />
-            <hr />
             <div className={styles.pageContainer}>
                 
                 <h2 style={{textAlign: "center"}}>FAME 2025</h2>

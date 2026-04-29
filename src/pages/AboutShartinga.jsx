@@ -117,8 +117,6 @@ function AboutShartinga() {
                     display: "flex", 
                     justifyContent: "center"
                 }}>
-                    <button className={styles.homeButton} 
-                    onClick={goHome}>HOMEPAGE</button>
                 </div>
                 <br />
 

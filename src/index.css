@@ -24,9 +24,15 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Bodoni Moda';
+    src: url('./assets/fonts/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;
+}
+
 
 :root {
-    --site-font: 'Red Hat';
+    --site-font: 'Bodoni Moda';
     --site-bg: #060606;
     --site-text: whitesmoke;
 }

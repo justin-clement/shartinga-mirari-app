@@ -26,8 +26,8 @@ function Collections() {
     return (
         <>
             <motion.div 
-            animate={{ opacity: [0, 1], x: [50, 0] }}
-            transition={{ duration: 0.3 }}
+            animate={{ opacity: [0, 1]}}
+            transition={{ duration: 0.5 }}
             className={styles.pageContainer}>
 
                 <div className={styles.clothingImages}>
@@ -96,7 +96,26 @@ function Collections() {
 
                     <details>
                         <summary>FABRIC & CARE</summary>
-                        <p></p>
+                            <motion.div 
+                            animate={{y: [-20, 0], opacity: [0, 1]}} 
+                            transition={{ duration: 0.8 }}>
+                                <p>To preserve the quality, texture, and longevity of your garment, 
+                                    follow these care instructions:
+                                </p>
+                                <p>Do not machine wash. Do not soak. Gently wipe with a soft, dry 
+                                    or slightly damp cloth to remove surface dirt. For deeper cleaning, 
+                                    use a specialist leather cleaner.
+                                </p>
+                                <p>Air dry only. Keep away from continuous direct heat or sunlight.</p>
+                                <p>Store in a cool, dry place. Hang on a wide hanger to maintain shape. a
+                                    Avoid folding to prevent creases.
+                                </p>
+                                <p>Condition periodically with a quality leather conditioner to keep 
+                                    the material supple. Avoid contact with water, oils, and harsh chemicals.
+                                </p>
+                                <p>Note: Leather may develop unique marks over time; this is part of its character.</p>
+                                <p>Handle with care. Wear with intention.</p>
+                            </motion.div>
                     </details>
 
                     <details>
@@ -104,7 +123,6 @@ function Collections() {
                         <p></p>
                     </details>
                 </div>
-
             </motion.div>
         </>
     )

@@ -14,20 +14,6 @@
     padding: 15px;
 }
 
-.homeButton {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    width: 70vw;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.homeButton:hover {
-    background-color: rgb(29, 29, 29);
-}
-
 @media (min-width: 768px) {
     .containerOne {
         flex-direction: row;
