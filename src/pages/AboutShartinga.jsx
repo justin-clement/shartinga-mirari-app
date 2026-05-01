@@ -1,20 +1,12 @@
-import ShartingaHeader from "../components/ShartingaHeader"
 import styles from '../styling/aboutshartinga.module.css'
 import photo1 from '../assets/pictures/guy_in_hat2.jpg'
 import threeGees from '../assets/pictures/three_guys_lobby.jpg'
 import chessGirls from '../assets/pictures/two_girls_chess.jpg'
 import { motion } from 'framer-motion'
-import { useNavigate } from "react-router-dom"
-import ScrollToTop from "../components/ScrollToTop"
+
 
 
 function AboutShartinga() {
-
-    const navigate = useNavigate();
-
-    const goHome = () => {
-        navigate('/')
-    }
 
     return (
         <>
@@ -113,14 +105,6 @@ function AboutShartinga() {
                 </div>
                 <br />
 
-                <div style={{
-                    display: "flex", 
-                    justifyContent: "center"
-                }}>
-                </div>
-                <br />
-
-                <p style={{textAlign: "center"}}>© 2025 SHARTINGA MIRARI</p>
             </div>
         </>
     )

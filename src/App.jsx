@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {path: '/explore', element: <ExplorePage />}, 
       {path: '/product/:itemId', element: <FashionItemPage 
         name="Hoodie De Shartinga" />}, 
-      {path: '/waitlist/', element: <AddToWaitlist />},
+      {path: '/waitlist', element: <AddToWaitlist />},
       {path: '/about', element: <AboutShartinga />}, 
       {path: '/events', element: <FashionEvents />}
     ]

@@ -13,8 +13,8 @@ function Homepage() {
         navigate('/explore')
     };
 
-    const goToWaitlist = () => {
-        navigate('/waitlist/0001')
+    const goToCollections = () => {
+        navigate('/collections')
     };
 
     const goToEvents = () => {
@@ -24,6 +24,7 @@ function Homepage() {
     return (
         <>
             <div className={styles.homepageContainer}>
+
                 {/* Hero Video Section */}
                 <section className={styles.heroSection}>
                     <video autoPlay muted loop playsInline className={styles.landingVideo}>
@@ -55,11 +56,12 @@ function Homepage() {
                         fontSize: "40px", 
                         textAlign: "center", 
                     }}>Our Latest Addition</h2>
-                    <FrameCard 
+                    
+                    {/* <FrameCard 
                     src="/images/lone_jacket.jpeg" 
                     caption="SHARTINGA MIRARI Alligator Varsity Jacket"
-                    buttonText="Join Waitlist" 
-                    buttonFunction={goToWaitlist} />
+                    buttonText="Get Jacket" 
+                    buttonFunction={goToCollections} /> */}
                 </div>
 
                 {/* Collection Preview */}
@@ -75,7 +77,7 @@ function Homepage() {
                     <div className={styles.collectionPreviewContent}>
                         <button
                             className={styles.exploreButton}
-                            onClick={goToExplore}
+                            onClick={goToCollections}
                         >
                             <b>TAKE A LOOK</b>
                         </button>
@@ -119,18 +121,9 @@ function Homepage() {
                         width={400}
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
-                        transition={{duration: 1}} />
+                        transition={{duration: 1}} 
+                        onClick={goToWaitlist} />
 
-                        {/* <FrameCard src={darkShartinga} /> */}
-                        {/* <FrameCard src={comp1} /> */}
-                        {/* <FrameCard src={comp2} /> */}
-                        {/* <FrameCard src={comp3} />
-                        <FrameCard src={comp4} />
-                        <FrameCard src={comp5} />
-                        <FrameCard src={comp6} />
-                        <FrameCard src={guyWalking} />
-                        <FrameCard src={comp7} /> */}
-                        {/* <FrameCard src={comp8} /> */}
                     </div>
                 </div>
                 <br />
@@ -151,6 +144,6 @@ function Homepage() {
         </>
         
     );
-}
+};
 
 export default Homepage;

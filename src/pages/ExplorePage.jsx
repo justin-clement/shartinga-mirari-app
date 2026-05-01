@@ -9,7 +9,7 @@ function ExplorePage() {
             <div 
             className={styles.pageContainer}>
                 <div className={styles.latestDisplay}>
-
+ 
                 </div>
 
                 <div className={styles.aboutLatest}>

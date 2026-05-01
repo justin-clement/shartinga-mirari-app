@@ -56,9 +56,9 @@ function Collections() {
 
                     <ul className={styles.qualities}>
                         <li>DEEP BLACK AND LUSTROUS CROC MATERIAL</li>
-                        <li>RHEINSTONE 'SHARTINGA' EMBELLISHMENT</li>
+                        <li>RHINESTONE 'SHARTINGA' EMBELLISHMENT</li>
                         <li>LIMITED EDITION ARTIFACT</li>
-                        <li>SIGNATURE ARCHITECTURAL SILHOUETTE</li>
+                        <li>SIGNATURE COLLECTION</li>
                     </ul>
                     
 

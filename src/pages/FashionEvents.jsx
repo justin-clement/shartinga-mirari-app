@@ -39,7 +39,7 @@ function FashionEvents() {
                 <br />
                 
                 <p style={{textAlign: "center"}}>Our stellar collection was on full display 
-                    on the FAME 2025 runway, hosted in the garden city of Rivers, Nigeria. 
+                    on the FAME 2025 runway, hosted in the garden state of Rivers, Nigeria. 
                 </p>
                 <br />
 
