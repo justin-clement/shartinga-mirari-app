@@ -56,7 +56,7 @@ function Homepage() {
                         fontSize: "40px", 
                         textAlign: "center", 
                     }}>Our Latest Addition</h2>
-                    
+
                     {/* <FrameCard 
                     src="/images/lone_jacket.jpeg" 
                     caption="SHARTINGA MIRARI Alligator Varsity Jacket"
@@ -122,7 +122,7 @@ function Homepage() {
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
                         transition={{duration: 1}} 
-                        onClick={goToWaitlist} />
+                        onClick={goToCollections} />
 
                     </div>
                 </div>
