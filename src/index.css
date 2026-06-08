@@ -46,6 +46,10 @@ body, #root {
     color: var(--site-text)
 }
 
+button {
+    cursor: pointer;
+}
+
 .iconDiv {
     display: flex;
     flex-direction: column;

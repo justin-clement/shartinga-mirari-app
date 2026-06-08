@@ -1,40 +1,55 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import AboutShartinga from './pages/AboutShartinga'
-import Homepage from './pages/Homepage'
-import ExplorePage from './pages/ExplorePage'
-import FashionItemPage from './components/FashionItemPage'
-import FashionEvents from './pages/FashionEvents'
 import RootPage from './pages/RootPage'
-import AddToWaitlist from './pages/AddToWaitlist'
-import Footer from './components/Footer'
-import Collections from './pages/Collections'
-
 
 const router = createBrowserRouter([
   {
-    element: <RootPage />, 
+    element: <RootPage />,
     children: [
-      {path: '/', element: <Homepage />}, 
-      {path: '/collections', element: <Collections />},
-
-      {path: '/footer', element: <Footer />}, 
-      {path: '/explore', element: <ExplorePage />}, 
-      {path: '/product/:itemId', element: <FashionItemPage 
-        name="Hoodie De Shartinga" />}, 
-      {path: '/waitlist', element: <AddToWaitlist />},
-      {path: '/about', element: <AboutShartinga />}, 
-      {path: '/events', element: <FashionEvents />}
+      {
+        index: true,
+        lazy: async () => ({ Component: (await import('./pages/Homepage')).default })
+      },
+      {
+        path: '/collections',
+        lazy: async () => ({ Component: (await import('./pages/Collections')).default })
+      },
+      {
+        path: '/footer',
+        lazy: async () => ({ Component: (await import('./components/Footer')).default })
+      },
+      {
+        path: '/explore',
+        lazy: async () => ({ Component: (await import('./pages/ExplorePage')).default })
+      },
+      {
+        path: '/product/:itemId',
+        lazy: async () => {
+          const module = await import('./components/FashionItemPage')
+          return {
+            Component: props => <module.default {...props} name="Hoodie De Shartinga" />
+          }
+        }
+      },
+      {
+        path: '/waitlist',
+        lazy: async () => ({ Component: (await import('./pages/AddToWaitlist')).default })
+      },
+      {
+        path: '/about',
+        lazy: async () => ({ Component: (await import('./pages/AboutShartinga')).default })
+      },
+      {
+        path: '/events',
+        lazy: async () => ({ Component: (await import('./pages/FashionEvents')).default })
+      }
     ]
   }
 ])
 
-
 function App() {
-
   return <RouterProvider router={router} />
-
-};
+}
 
 export default App;

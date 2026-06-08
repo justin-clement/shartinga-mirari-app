@@ -98,9 +98,7 @@ function Homepage() {
                         </p>
                     </motion.div>
                     <motion.img 
-                    style={{
-                        width: "100vw"
-                    }}
+                    className={styles.briefImage}
                     src="/images/IMG_9624.JPG"
                     alt="Bold in blues and blacks." 
                     initial={{opacity: 0}}

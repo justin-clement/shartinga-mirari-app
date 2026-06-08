@@ -19,8 +19,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -91,19 +91,22 @@
     align-items: center;
     background: linear-gradient(to top, bisque 0%, #fff7e6 100%);
     padding: 25px;
-    gap: 10px;
+    gap: 20px;
     color: black;
 }
 
-.briefAbout img {
+.briefAbout img,
+.briefImage {
     border-radius: 6px;
-    width: 80%;
+    width: 100%;
+    max-width: 720px;
 }
 
 .briefText {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
 }
 
 .briefText h2 {
@@ -170,6 +173,10 @@
 }
 
 @media (min-width: 900px) {
+    .heroSection {
+        height: 50vh;
+    }
+
     .collectionPreview {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -205,10 +212,22 @@
 
     .briefAbout {
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 4rem;
+        gap: 2.5rem;
     }
 
-    .briefAbout img {
-        width: 30vw;
+    .briefAbout img,
+    .briefImage {
+        width: 45%;
+        max-width: 560px;
+    }
+
+    .briefText {
+        align-items: flex-start;
+        text-align: left;
+        width: 50%;
     }
 
     .briefText h2 {

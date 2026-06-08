@@ -23,8 +23,9 @@ function AddToWaitlist({ productName }) {
         }))
     };
 
-    const addCustomertoWaitlist = async () => {
-        return;
+    const processPayment = () => {
+        const url = "https://flutterwave.com/pay/alligator_varsity";
+        window.open(url, "_blank", "noopener,noreferrer");
     };
 
     return (
@@ -50,7 +51,7 @@ function AddToWaitlist({ productName }) {
 
                 <div className={styles.form}>
 
-                    <label>How many would you like?<br /> 
+                    {/* <label>How many would you like?<br /> 
                         <input 
                         name='units'
                         value={order.units}
@@ -59,7 +60,7 @@ function AddToWaitlist({ productName }) {
                         required 
                         onChange={handleChange} />
                     </label>
-                    <br />
+                    <br /> */}
 
                     <label><i>We'll notify you about your order via email: </i><br />
                         <input 
@@ -75,7 +76,7 @@ function AddToWaitlist({ productName }) {
 
                     <button 
                     className={styles.button}
-                    onClick={addCustomertoWaitlist}>Place Order</button>
+                    onClick={processPayment}>Place Order</button>
                     <br />
                     <br />
                 </div>
