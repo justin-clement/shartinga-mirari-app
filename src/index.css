@@ -55,3 +55,32 @@ button {
     flex-direction: column;
     justify-content: center;
 }
+
+.routeLoadingOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    pointer-events: all;
+}
+
+.routeLoadingImage {
+    width: min(320px, 45vw);
+    max-height: min(320px, 45vh);
+    object-fit: contain;
+    animation: pulseZoom 2.6s ease-in-out infinite;
+}
+
+@keyframes pulseZoom {
+    0%, 100% {
+        transform: scale(0.92);
+        opacity: 0.82;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
