@@ -1,88 +1,116 @@
-import { useLocation, useParams } from "react-router-dom";
-import styles from "../styling/addtowaitlist.module.css"
+﻿import { useLocation } from "react-router-dom";
+import styles from "../pages/styling/addtowaitlist.module.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase";
 import SizeSelect from "../components/SizeSelect";
 
 function AddToWaitlist({ productName }) {
+  const location = useLocation();
+  const chosenSize = location.state?.size ?? "M";
 
-    const location = useLocation();
-    const chosenSize = location.state?.size;
+  const [order, setOrder] = useState({
+    customer_name: "",
+    item: productName || "Alligator Varsity Jacket",
+    size: chosenSize,
+    email: "",
+  });
 
-    const [order, setOrder] = useState({
-        size: chosenSize, 
-        units: 1, 
-        email: ''
-    })
+  const [status, setStatus] = useState({ loading: false, message: "", error: "" });
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setOrder(prev => ({
-            ...prev, 
-            [name]: value
-        }))
-    };
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setOrder((prev) => ({ ...prev, [name]: value }));
+  };
 
-    const processPayment = () => {
-        const url = "https://flutterwave.com/pay/alligator_varsity";
-        window.open(url, "_blank", "noopener,noreferrer");
-    };
+  const handleSizeChange = (size) => {
+    setOrder((prev) => ({ ...prev, size }));
+  };
 
-    return (
-        <>
-            <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className={styles.pageContainer}>
-                <br />
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus({ loading: true, message: "", error: "" });
 
-                <motion.img 
-                animate={{opacity: [0, 1], y: [-20, 0]}} 
-                transition={{duration: 0.5}} 
-                width={400} 
-                loading="lazy"
-                src="/images/IMG_9578.JPG" />
-                <h2>{productName}</h2>
-                 
-                <motion.h2 
-                animate={{ y: [20, 0] }}
-                transition={{ duration: 0.5 }}><b>Alligator Varsity Jacket from Shartinga Mirari</b></motion.h2>
+    if (!order.customer_name || !order.email) {
+      setStatus({ loading: false, message: "", error: "Please enter your name and email." });
+      return;
+    }
 
-                <div className={styles.form}>
+    try {
+      await addDoc(collection(db, "waitlist"), {
+        ...order,
+        createdAt: serverTimestamp(),
+        status: "pending",
+      });
 
-                    {/* <label>How many would you like?<br /> 
-                        <input 
-                        name='units'
-                        value={order.units}
-                        className={styles.unitsField}
-                        type="number" 
-                        required 
-                        onChange={handleChange} />
-                    </label>
-                    <br /> */}
+      setStatus({ loading: false, message: "Your request was added to the waitlist.", error: "" });
+      setOrder((prev) => ({ ...prev, customer_name: "", email: "" }));
+    } catch (error) {
+      console.error(error);
+      setStatus({ loading: false, message: "", error: "Unable to save your order. Please try again." });
+    }
+  };
 
-                    <label><i>We'll notify you about your order via email: </i><br />
-                        <input 
-                        name='email'
-                        value={order.email}
-                        className={styles.formField}
-                        type="email" 
-                        placeholder="person@example.com" 
-                        required 
-                        onChange={handleChange} />
-                    </label>
-                    <br />
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className={styles.pageContainer}
+    >
+      <motion.img
+        animate={{ opacity: [0, 1], y: [-20, 0] }}
+        transition={{ duration: 0.5 }}
+        width={400}
+        loading="lazy"
+        src="/images/IMG_9578.JPG"
+        alt="Shartinga Varsity Jacket"
+      />
+      <h2>{order.item}</h2>
 
-                    <button 
-                    className={styles.button}
-                    onClick={processPayment}>Place Order</button>
-                    <br />
-                    <br />
-                </div>
-            </motion.div>
-        </>
-    )
-};
+      <motion.h2 animate={{ y: [20, 0] }} transition={{ duration: 0.5 }}>
+        <b>{order.item} from Shartinga Mirari</b>
+      </motion.h2>
+
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <label>
+          Your Name<br />
+          <input
+            name="customer_name"
+            value={order.customer_name}
+            className={styles.formField}
+            type="text"
+            placeholder="Your name"
+            required
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Email<br />
+          <input
+            name="email"
+            value={order.email}
+            className={styles.formField}
+            type="email"
+            placeholder="person@example.com"
+            required
+            onChange={handleChange}
+          />
+        </label>
+
+        <SizeSelect selectedSize={order.size} sizesArray={["XS", "S", "M", "L", "XL"]} onSizeChange={handleSizeChange} />
+
+        <button className={styles.button} type="submit" disabled={status.loading}>
+          {status.loading ? "Saving…" : "Add to Waitlist"}
+        </button>
+
+        {status.error && <p className={styles.errorText}>{status.error}</p>}
+        {status.message && <p className={styles.successText}>{status.message}</p>}
+      </form>
+    </motion.div>
+  );
+}
 
 export default AddToWaitlist;

@@ -1,4 +1,4 @@
-import styles from "../styling/framecard.module.css"
+import styles from "./styling/framecard.module.css"
 import { motion } from "framer-motion";
 
 function FrameCard({ src, caption, buttonText, buttonFunction }) {

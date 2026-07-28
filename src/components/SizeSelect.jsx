@@ -1,31 +1,32 @@
-import { useState } from 'react';
-import styles from '../styling/sizeselect.module.css'
+﻿import { useState } from 'react';
+import styles from './styling/sizeselect.module.css';
 
-function SizeSelect( {orderId, sizesArray, onSizeChange} ) {
+function SizeSelect({ selectedSize = "M", sizesArray = ["XS", "S", "M", "L", "XL"], onSizeChange }) {
+  const [chosenSize, setChosenSize] = useState(selectedSize);
 
-    // STATE TO HANDLE SIZE SELECTION.
-    const [chosenSize, setChosenSize] = useState('');
-
-    // FUNCTION TO SELECT AND RECORD SIZE.
-    const chooseSize = async (choice) => {
-
-        // RECORD CHOSEN SIZE.
-        setChosenSize(choice);
-        onSizeChange(choice); // This is to export it beyond the component.    
+  const chooseSize = (choice) => {
+    setChosenSize(choice);
+    if (typeof onSizeChange === 'function') {
+      onSizeChange(choice);
     }
+  };
 
-    return (
-        <div>
-            <p style={{color: "grey", textAlign:"center"}}><b>CHOOSE SIZE</b></p>
-            <ul className={styles.sizesMenu}>
-                {sizesArray.map(size => (
-                    <li 
-                    className={`${chosenSize === size ? styles.chosen : styles.sizes}`} 
-                    onClick={() => chooseSize({size})}>{size}</li>
-                ))}
-            </ul>
-        </div>
-    )
-};
+  return (
+    <div>
+      <p style={{ color: 'grey', textAlign: 'center' }}><b>CHOOSE SIZE</b></p>
+      <ul className={styles.sizesMenu}>
+        {sizesArray.map((size) => (
+          <li
+            key={size}
+            className={chosenSize === size ? styles.chosen : styles.sizes}
+            onClick={() => chooseSize(size)}
+          >
+            {size}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default SizeSelect;

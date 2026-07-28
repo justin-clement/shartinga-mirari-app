@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "../styling/homepage.module.css";
+import styles from "../pages/styling/homepage.module.css";
 import FrameCard from "../components/FrameCard";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -57,11 +57,6 @@ function Homepage() {
                         textAlign: "center", 
                     }}>Our Latest Addition</h2>
 
-                    {/* <FrameCard 
-                    src="/images/lone_jacket.jpeg" 
-                    caption="SHARTINGA MIRARI Alligator Varsity Jacket"
-                    buttonText="Get Jacket" 
-                    buttonFunction={goToCollections} /> */}
                 </div>
 
                 {/* Collection Preview */}
@@ -86,28 +81,30 @@ function Homepage() {
 
                 {/* Brief About Section */}
                 <div className={styles.briefAbout}>
+
                     <motion.div 
                     initial={{x: -20, opacity: 0}}
                     whileInView={{x: 0, opacity: 1}}
                     transition={{ duration: 1 }}
                     className={styles.briefText}>
                         <h2>Across Worlds, One Vision.</h2>
-                        <p>Continually aware of heritage, and with expanded imagination, we move 
+                        <p style={{ color: "whitesmoke" }}>Continually aware of heritage, and with expanded imagination, we move 
                             in rhythm with the future - crafting fashion that's alive, 
                             bold, and visionary.
                         </p>
                     </motion.div>
-                    <motion.img 
+
+                    {/* <motion.img 
                     className={styles.briefImage}
                     src="/images/IMG_9624.JPG"
                     alt="Bold in blues and blacks." 
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
-                    transition={{duration: 1}} />
-                </div>
-                <br />
+                    transition={{duration: 1}} /> */}
 
-                <div className={styles.complementarySection}>
+                </div>
+
+                {/* <div className={styles.complementarySection}>
                     <h2 style={{
                         "fontSize": "35px", 
                         "textAlign": "center" 
@@ -124,9 +121,9 @@ function Homepage() {
 
                     </div>
                 </div>
-                <br />
+                <br /> */}
 
-                <div onClick={goToEvents} className={styles.eventSection}>
+                {/* <div onClick={goToEvents} className={styles.eventSection}>
                     <h3 style={{
                         textAlign: 'center', 
                         fontSize: '35px'}}>Events</h3>
@@ -137,7 +134,16 @@ function Homepage() {
                         textAlign: "center"
                      }}>View our runway collection from FAME 2025.</Link>
                     
+                </div> */}
+                
+                <div style={{ display: "flex", justifyContent: "center" }}>
+
+                    <img 
+                    style={{ width: "50vw"}}
+                    src="/images/SM_LOGO_WHITEONBLACK.PNG" />
+
                 </div>
+                
             </div>
         </>
         

@@ -1,4 +1,4 @@
-import styles from "../styling/newheader.module.css";
+import styles from "./styling/newheader.module.css";
 import { FiSearch as SearchIcon } from "react-icons/fi";
 import { HiOutlineShoppingCart as CartIcon } from "react-icons/hi";
 import logo from "../assets/sm_web_logo.jpg";
@@ -21,6 +21,10 @@ function MainHeader() {
         navigate("/about")
     };
 
+    const goToEvents = () => {
+        navigate("/events")
+    };
+
     return (
         <>
             <div className={styles.header}>
@@ -30,7 +34,7 @@ function MainHeader() {
 
                 <div className={styles.navigationMenu}>
                     <p onClick={goToCollections}>COLLECTIONS</p>
-                    <p>MANIFESTO</p>
+                    <p onClick={goToEvents}>EVENTS</p>
                     <p onClick={goToAbout}>ABOUT</p>
                 </div>
 

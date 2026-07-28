@@ -1,0 +1,176 @@
+.pageContainer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 18px;
+  color: #111;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.authCard,
+.dashboardCard {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+  padding: 28px;
+  margin: 18px 0;
+}
+
+.authCard {
+  max-width: 520px;
+  margin: 48px auto;
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 2.4vw, 2.8rem);
+  margin-bottom: 18px;
+  letter-spacing: -0.05em;
+}
+
+.leadText {
+  max-width: 700px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #444;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.formField,
+.selectField {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(34, 34, 34, 0.12);
+  background: #fff;
+  font-size: 1rem;
+}
+
+.button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  background: #222;
+  transform: translateY(-1px);
+}
+
+.statusPanel {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.errorText {
+  color: #b00020;
+  font-weight: 600;
+}
+
+.successText {
+  color: #1d6b44;
+  font-weight: 600;
+}
+
+.orderGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.orderCard {
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 18px;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.orderTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.orderRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.detailsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  color: #444;
+}
+
+.detailsList li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.statusBadge {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.86rem;
+  background: #f4f4f4;
+}
+
+.statusPending {
+  color: #b06b00;
+  background: #fff4db;
+}
+
+.statusProcessed {
+  color: #0f6b30;
+  background: #e9f7ef;
+}
+
+.adminToolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.orderButton {
+  background: #080808;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.orderButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.noteText {
+  color: #555;
+  font-size: 0.95rem;
+}

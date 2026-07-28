@@ -1,6 +1,6 @@
 import ShartingaHeader from '../components/ShartingaHeader';
 import ScrollToTop from '../components/ScrollToTop';
-import styles from '../styling/explorepage.module.css';
+import styles from '../pages/styling/explorepage.module.css';
 
 function ExplorePage() {
 

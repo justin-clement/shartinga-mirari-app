@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import styles from "../styling/footer.module.css"
+import styles from "./styling/footer.module.css"
 import { MdOutlineEmail as Email } from "react-icons/md";
 import { IoLogoWhatsapp as Whatsapp } from "react-icons/io5";
 import { FaInstagram as Insta, FaTiktok as Tiktok } from "react-icons/fa";

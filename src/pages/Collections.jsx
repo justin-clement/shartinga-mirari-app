@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../styling/collections.module.css";
+import styles from "../pages/styling/collections.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 

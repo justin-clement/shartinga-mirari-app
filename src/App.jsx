@@ -41,6 +41,14 @@ const router = createBrowserRouter([
         lazy: async () => ({ Component: (await import('./pages/AboutShartinga')).default })
       },
       {
+        path: '/admin',
+        lazy: async () => ({ Component: (await import('./pages/Admin/AdminLogin')).default })
+      },
+      {
+        path: '/admin/dashboard',
+        lazy: async () => ({ Component: (await import('./pages/Admin/AdminDashboard')).default })
+      },
+      {
         path: '/events',
         lazy: async () => ({ Component: (await import('./pages/FashionEvents')).default })
       }

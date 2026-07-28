@@ -24,6 +24,11 @@
     font-size: 1rem;
 }
 
+.form label {
+    margin: 5px;
+    font-weight: bold;
+}
+
 .formField, .unitsField {
     padding: 10px;
     border: none;

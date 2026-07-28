@@ -3,7 +3,7 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import ShartingaHeader from "./ShartingaHeader";
 import SizeSelect from "./SizeSelect";
-import styles from "../styling/fashionitempage.module.css";
+import styles from "./styling/fashionitempage.module.css";
 import { Link, useLocation, useParams } from "react-router-dom";
 
 function FashionItemPage({ name }) {

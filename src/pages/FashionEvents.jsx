@@ -1,4 +1,4 @@
-import styles from "../styling/fashionevents.module.css"
+import styles from "../pages/styling/fashionevents.module.css"
 import fameIntroVid from "../assets/videos/fame_vid1.mp4"
 
 import fame1 from "../assets/pictures/fame1.jpg"

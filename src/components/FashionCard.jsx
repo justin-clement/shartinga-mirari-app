@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import styles from "../styling/fashioncard.module.css";
+import styles from "./styling/fashioncard.module.css";
 import { Link } from "react-router-dom";
 
 function FashionCard({ image, caption, link }) {
