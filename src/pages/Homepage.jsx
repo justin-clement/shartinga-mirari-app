@@ -28,8 +28,8 @@ function Homepage() {
                 {/* Hero Video Section */}
                 <section className={styles.heroSection}>
                     <video autoPlay muted loop playsInline className={styles.landingVideo}>
-                        <source src="/videos/IMG_8491.mp4" type="video/mp4" />
-                        Your browser doesn't support the video tag.
+                        <source src="https://res.cloudinary.com/w3s14ry4/video/upload/SM_landing_page_vid_in9lqw.mp4" type="video/mp4" />
+                        The video isn't loading in your browser.
                     </video>
 
                     {/* Overlay text */}
