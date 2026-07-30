@@ -24,10 +24,6 @@ function AddToWaitlist({ productName }) {
     setOrder((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSizeChange = (size) => {
-    setOrder((prev) => ({ ...prev, size }));
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus({ loading: true, message: "", error: "" });
@@ -67,7 +63,6 @@ function AddToWaitlist({ productName }) {
         src="/images/IMG_9578.JPG"
         alt="Shartinga Varsity Jacket"
       />
-      <h2>{order.item}</h2>
 
       <motion.h2 animate={{ y: [20, 0] }} transition={{ duration: 0.5 }}>
         <b>{order.item} from Shartinga Mirari</b>
@@ -99,8 +94,6 @@ function AddToWaitlist({ productName }) {
             onChange={handleChange}
           />
         </label>
-
-        <SizeSelect selectedSize={order.size} sizesArray={["XS", "S", "M", "L", "XL"]} onSizeChange={handleSizeChange} />
 
         <button className={styles.button} type="submit" disabled={status.loading}>
           {status.loading ? "Saving…" : "Add to Waitlist"}

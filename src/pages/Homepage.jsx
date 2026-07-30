@@ -39,7 +39,7 @@ function Homepage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
                     >
-                        <h1><i>Cultural. Confident. Set to Inspire.</i></h1>
+                        <h1><i>Confidence set to inspire.</i></h1>
                         <p><b>SHARTINGA</b></p>
                     </motion.div>
                 </section>

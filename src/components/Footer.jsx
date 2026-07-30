@@ -7,7 +7,9 @@ import { FaInstagram as Insta, FaTiktok as Tiktok } from "react-icons/fa";
 
 
 function Footer() {
-
+    const openInstagram = () => {
+        window.open('https://www.instagram.com/shartinga.mirari', '_blank', 'noopener,noreferrer');
+    };
 
     return (
         <>
@@ -26,7 +28,9 @@ function Footer() {
                         <div>
                             <Insta 
                             color="grey"
-                            size={20} />
+                            size={20}
+                            onClick={openInstagram}
+                            style={{ cursor: 'pointer' }} />
                         </div>
                     </li>
                     <li>
